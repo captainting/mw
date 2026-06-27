@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>MW Ferry | 梅窩中環渡輪</title>
+  <meta name="description" content="Use location to show the next Mui Wo ↔ Central ferry direction." />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="app">
+    <section class="hero">
+      <header class="topbar">
+        <div class="brand">
+          <img src="assets/mw-logo.svg" alt="MW Ferry logo" />
+          <div>
+            <strong>MW Ferry</strong>
+            <span>Mui Wo ↔ Central</span>
+          </div>
+        </div>
+        <button id="langBtn" class="ghost">EN</button>
+      </header>
+
+      <div class="hero-center">
+        <div class="route-icon">⛴</div>
+        <h1 data-zh="梅窩渡輪" data-en="MW Ferry">梅窩渡輪</h1>
+        <p data-zh="梅窩 ↔ 中環" data-en="Mui Wo ↔ Central">梅窩 ↔ 中環</p>
+        <div id="clock" class="clock">--:--:--</div>
+        <div id="dateLine" class="date-line">Hong Kong Time</div>
+      </div>
+
+      <div class="mode-tabs" role="tablist">
+        <button id="weekdayBtn" class="tab active" data-type="weekday">星期一至六</button>
+        <button id="holidayBtn" class="tab" data-type="holiday">星期日及假日</button>
+      </div>
+    </section>
+
+    <section class="location-card">
+      <div>
+        <p class="eyebrow" data-zh="智能方向" data-en="Smart direction">智能方向</p>
+        <h2 id="smartTitle">按定位，顯示你應該看的方向</h2>
+        <p id="smartText">點擊下面按鈕，網站會判斷你較接近梅窩碼頭還是中環碼頭。</p>
+      </div>
+      <button id="locateBtn" class="primary">📍 使用我的位置</button>
+      <p id="locationStatus" class="status"></p>
+    </section>
+
+    <section id="recommendation" class="recommendation hidden">
+      <p class="eyebrow">Next ferry</p>
+      <h2 id="recommendTitle"></h2>
+      <div class="big-time" id="recommendTime"></div>
+      <p id="recommendMeta"></p>
+    </section>
+
+    <section class="manual">
+      <p class="eyebrow" data-zh="手動選擇" data-en="Manual choice">手動選擇</p>
+      <div class="switches">
+        <button class="route-choice active" data-direction="centralToMuiWo">中環開出 → 梅窩</button>
+        <button class="route-choice" data-direction="muiWoToCentral">梅窩開出 → 中環</button>
+      </div>
+    </section>
+
+    <section class="cards">
+      <article class="ferry-card" id="centralCard">
+        <div class="card-title"><span class="pin">🏙️</span><h2>中環 Central</h2></div>
+        <div id="centralList" class="times"></div>
+      </article>
+
+      <article class="ferry-card" id="muiWoCard">
+        <div class="card-title"><span class="pin">📍</span><h2>梅窩 Mui Wo</h2></div>
+        <div id="muiWoList" class="times"></div>
+      </article>
+    </section>
+
+    <footer>
+      <p>Schedule source: Sun Ferry timetable effective from 1 April 2026. Please check official notices before travelling.</p>
+    </footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

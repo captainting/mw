@@ -1,0 +1,10 @@
+<svg width="320" height="180" viewBox="0 0 320 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="320" height="180" rx="28" fill="#0B2D4D"/>
+  <text x="42" y="103" font-family="Georgia, 'Times New Roman', serif" font-size="78" font-weight="700" fill="white" letter-spacing="-8">MW</text>
+  <path d="M43 126 C82 101 116 150 158 124 C189 104 224 112 276 125" stroke="#E6F1F7" stroke-width="8" stroke-linecap="round"/>
+  <path d="M55 136 C94 111 126 155 166 134 C197 118 229 124 279 137" stroke="#4FA3C7" stroke-width="6" stroke-linecap="round"/>
+  <path d="M196 112 L257 112 L270 123 L184 123 L196 112Z" fill="white"/>
+  <path d="M211 94 H245 L252 112 H202 L211 94Z" fill="#E6F1F7"/>
+  <rect x="223" y="80" width="8" height="14" rx="2" fill="#E6F1F7"/>
+  <circle cx="232" cy="103" r="4" fill="#0B2D4D"/>
+</svg>
